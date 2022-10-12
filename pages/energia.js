@@ -1,6 +1,5 @@
 import Layout from '../components/Layout';
 import { useRouter } from 'next/router';
-import { Title } from '@mantine/core';
 import FormularioEnergia from '../components/FormularioEnergia';
 
 const Energia = () => {

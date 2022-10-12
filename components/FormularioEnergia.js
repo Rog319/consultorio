@@ -16,11 +16,6 @@ import {
   formulaOwen,
   formulaValencia,
   mostrarResultado,
-  mostrarResultadoHarris,
-  mostrarResultadoMifflin,
-  mostrarResultadoOms,
-  mostrarResultadoOwen,
-  mostrarResultadoValencia,
 } from '../helpers';
 import CuadroDietosintetico from './CuadroDietosintetico';
 

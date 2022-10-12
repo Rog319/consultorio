@@ -1,7 +1,8 @@
-import { Button, Group, Title, Text, Space } from '@mantine/core';
+import { Button, Group, Title, Text, Space, Input } from '@mantine/core';
 import React, { useState } from 'react';
 import CuadroGramosKilos from './CuadroGramosKilos';
 import CuadroPorcentaje from './CuadroPorcentaje';
+import FormularioPorcentajeCuadro from './FormularioPorcentajeCuadro';
 
 const CuadroDietosintetico = ({ get, datosPaciente }) => {
   const [tipoCuadro, setTipoCuadro] = useState(0);

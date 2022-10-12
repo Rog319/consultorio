@@ -1,5 +1,6 @@
 import {
   NumberInput,
+  TextInput,
   Button,
   Space,
   Input,
@@ -31,7 +32,7 @@ const CuadroPorcentaje = ({ get, datosPaciente }) => {
   const { peso } = datosPaciente;
 
   const form = useForm({
-    initialValues: { proteinasP: 0, lipidosP: 0, carbohidratosP: 0 },
+    initialValues: { proteinasP: '', lipidosP: '', carbohidratosP: '' },
     validate: {
       proteinasP: (value) => (value === 0 ? 'Coloque un porcentaje' : null),
       lipidosP: (value) => (value === 0 ? 'Coloque un porcentaje' : null),
@@ -78,7 +79,7 @@ const CuadroPorcentaje = ({ get, datosPaciente }) => {
   };
   return (
     <div>
-      <Space h='md' /> 
+      <Space h='md' />
       {totalPorcentaje !== 100 ? (
         <Alert icon={<IconAlertCircle size={16} />} title='ERROR' color='red'>
           La suma de los porcentajes debe ser 100, verifiquelos!
@@ -97,10 +98,19 @@ const CuadroPorcentaje = ({ get, datosPaciente }) => {
           <SimpleGrid verticalSpacing='lg'>
             <Text>Porcentaje</Text>
 
-            <NumberInput hideControls {...form.getInputProps('proteinasP')} />
-            <NumberInput hideControls {...form.getInputProps('lipidosP')} />
+            <NumberInput
+              placeholder='Porcentaje de proteinas'
+              hideControls
+              {...form.getInputProps('proteinasP')}
+            />
             <NumberInput
               hideControls
+              placeholder='Porcentaje de lipidos'
+              {...form.getInputProps('lipidosP')}
+            />
+            <NumberInput
+              hideControls
+              placeholder='Porcentaje de carbohidratos'
               {...form.getInputProps('carbohidratosP')}
             />
             <Text>{totalPorcentaje}</Text>
